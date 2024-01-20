@@ -17,7 +17,7 @@
 
     <header class="page-header" role="banner">
       {% if page.title %}      
-        <h1 class="project-name">{{ site.title}} : {{page.title }}</h1>
+        <h1 class="project-name">{{ site.title}} : {{ page.title }}</h1>
       {% else %}
         <h1 class="project-name">{{ site.title}}</h1>
       {% endif %}
@@ -26,9 +26,9 @@
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
 
-      {% for eachpage in pages %}
+      {% for eachpage in site.pages %}
         {% if eachpage.nav %} 
-          <a href="{{ page.url }}" class="btn"></a>
+          <a href="{{ eachpage.url }}" class="btn"></a>
         {% endif %}
       {% endfor %}
 
